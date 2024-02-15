@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'main/base.html' %}
+{% load static %}
 
-</body>
-</html>
+
+{% block css_footer %}
+    <link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}">
+{% endblock css_footer %}
+
+{% block content %}
+    <h1 class="mt-5 pt-5"><strong class="f-t">{{ content }}</strong></h1>
+{% endblock content %}
+
+{% block footer %}
+{% include 'main/includes/footer.html' %}
+{% endblock footer %}

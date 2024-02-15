@@ -12,5 +12,6 @@ def index(request):
 def about(request):
     context = {
         'title': 'Wood crafts - О нас',
+        'content': 'О нас'
     }
     return render(request, 'main/about.html', context)
